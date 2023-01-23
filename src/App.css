@@ -419,6 +419,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  position: relative;
 }
 
 .select-container {
@@ -552,6 +553,22 @@ img {
 
 .loader-img{
   border-radius: 50%;
+}
+
+.drop-down{
+  text-align: start;
+  padding: 0 1rem ;
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 90%;
+  position: absolute;
+  top: 38px;
+  z-index: 100;
+}
+
+.pokemon-result{
+  text-transform: capitalize;
+  padding: 5px 0;
 }
 
 @media screen AND (min-width: 768px) {
@@ -862,6 +879,28 @@ img {
 .hero-btns{
   display: flex;
   gap: 20px;
+}
+
+.drop-down{
+  text-align: start;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 40%;
+  position: absolute;
+  top: 48px;
+  z-index: 100;
+}
+
+.pokemon-result{
+  text-transform: capitalize;
+  padding: 5px 1rem;
+  cursor: pointer;
+}
+
+.pokemon-result:hover{
+  background-color: steelblue;
+  color: white;
 }
 
 
