@@ -45,10 +45,6 @@ const Pokemons = () => {
   };
 
 
-//   console.log(pokemons);
-
-  // console.log(types);
-
   return (
     <>
       <main className="pokemons">

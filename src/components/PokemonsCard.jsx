@@ -107,7 +107,6 @@ const PokemonsCard = ({url, isDarkMode}) => {
     }
 
 
-    // console.log(pokemon);
     return (
         <div className='card' style={{background: setBgColorNormal()}} onClick={() => navigate(`/pokemons/${pokemon.id}`)}>
             <div className="card-info">

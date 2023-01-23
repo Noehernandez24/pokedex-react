@@ -21,11 +21,8 @@ const SearchPokemon = ({pokemons}) => {
         .catch(() => alertError())
     }
 
-    // console.log(pokemons);
-
     const pokemonFilter = pokemons.filter(pokemon => pokemon.name?.startsWith(inputSearch.toLowerCase()))
 
-    // console.log(pokemonFilter);
 
   
     return (
