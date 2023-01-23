@@ -5,9 +5,16 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const SearchPokemon = ({pokemons}) => {
+const SearchPokemon = () => {
+    const [pokemons, setPokemons] = useState([])
     const [inputSearch, setInputSearch] = useState("")
     const navigate = useNavigate()
+
+    useEffect(() => {
+        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1279")
+        .then(res => setPokemons(res.data.results))
+    }, [])
+
 
     const alertError = () =>{
         Swal.fire("Pokemon no encontrado",`Verifica que el nombre este escrito correctamente`,"error")
@@ -22,6 +29,8 @@ const SearchPokemon = ({pokemons}) => {
     }
 
     const pokemonFilter = pokemons.filter(pokemon => pokemon.name?.startsWith(inputSearch.toLowerCase()))
+
+   
 
 
   

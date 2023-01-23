@@ -66,7 +66,7 @@ const Pokemons = () => {
         </header>
 
         <div className="filter-and-input">
-          <SearchPokemon pokemons={pokemons}/>
+          <SearchPokemon/>
 
           <select className="select" onChange={filterTypes}>
             <option className="option" value="https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1279">
