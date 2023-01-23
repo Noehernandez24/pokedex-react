@@ -859,6 +859,13 @@ img {
   padding: .8rem 1.1rem;
 }
 
+.hero-btns{
+  display: flex;
+  gap: 20px;
+}
+
+
+
 
 }
 

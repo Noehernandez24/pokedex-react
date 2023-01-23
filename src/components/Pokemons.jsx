@@ -60,7 +60,11 @@ const Pokemons = () => {
             <span>Bienvenido {userName}, </span> aqui podras encontrar tu
             pokemon favorito!
           </h2>
+
+          <div className="hero-btns">
           <button onClick={() => navigate("/config")} className="config"><i className='bx bxs-cog bx-spin-hover'></i></button>
+          </div>
+          
           </div>
 
         </header>

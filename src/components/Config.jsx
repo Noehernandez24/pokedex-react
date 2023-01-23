@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import profesorOak from '../assets/profesor-oak.png'
 import { changePostPerPage } from '../store/slices/postPerPage.slice';
 
 const Config = () => {
-    const [rangeValue, setRangeValue] = useState(5)
+    const postPerPage = useSelector(state => state.postPerPage)
+    const [rangeValue, setRangeValue] = useState(postPerPage)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 

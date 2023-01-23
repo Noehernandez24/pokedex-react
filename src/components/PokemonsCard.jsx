@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PokemonsCard = ({url}) => {
+const PokemonsCard = ({url, isDarkMode}) => {
     const [pokemon, setPokemon] = useState({})
     const navigate = useNavigate()
 
@@ -117,7 +117,7 @@ const PokemonsCard = ({url}) => {
                 </article>
 
                 {/* INFORMATION */}
-                <article className="card-texts">
+                <article style={isDarkMode ? {backgroundColor: "#151A1E"} : {backgroundColor: "#fff"}} className="card-texts">
                   <h2 style={{color: setBgColorNormal()}} className='card-title'>{pokemon.name}</h2>
 
                   <div className="card-types">
