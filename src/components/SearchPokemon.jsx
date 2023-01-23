@@ -37,7 +37,7 @@ const SearchPokemon = ({pokemons}) => {
                 <div className="drop-down">
                 {
                     pokemonFilter.map(pokemon => (
-                        <p onClick={() => navigate(`/pokemons/${pokemon.name}`)} className='pokemon-result'>{pokemon.name}</p>
+                        <p key={pokemon.url} onClick={() => navigate(`/pokemons/${pokemon.name}`)} className='pokemon-result'>{pokemon.name}</p>
                     ))
                 }
                 </div>
