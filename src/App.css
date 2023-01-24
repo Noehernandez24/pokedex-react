@@ -560,7 +560,7 @@ img {
   padding: 0 1rem ;
   background-color: #fff;
   border: 1px solid gray;
-  width: 90%;
+  width: 289px;
   position: absolute;
   top: 38px;
   z-index: 100;
@@ -569,6 +569,10 @@ img {
 .pokemon-result{
   text-transform: capitalize;
   padding: 5px 0;
+}
+
+.input-and-drop{
+  width: 100%;
 }
 
 @media screen AND (min-width: 768px) {
@@ -642,12 +646,16 @@ img {
 
   .input-container-s {
     width: 40%;
-    display: flex;
+    display: grid;
   }
 
   .input-search {
     width: 100%;
     padding: 1rem;
+  }
+
+  .input-and-buttom{
+    display: flex;
   }
 
   /* Filter */

@@ -33,11 +33,12 @@ const SearchPokemon = () => {
     return (
         <>
             <div className="input-container-s">
+                <div className="input-and-buttom">
                 <input value={inputSearch} onChange={e => setInputSearch(e.target.value)} className='input-search' type="text" placeholder='Busca un pokemón' />
                 <button onClick={searchPokemon} className='btn-search'>Buscar</button>
-            </div>
+                </div>
 
-            {
+                {
                 inputSearch !== "" &&
                 <div className="drop-down">
                 {
@@ -46,7 +47,11 @@ const SearchPokemon = () => {
                     ))
                 }
                 </div>
-            }
+                }
+                
+            </div>
+
+          
            
           
         </>
