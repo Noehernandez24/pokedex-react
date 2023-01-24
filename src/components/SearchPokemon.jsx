@@ -30,10 +30,6 @@ const SearchPokemon = () => {
 
     const pokemonFilter = pokemons.filter(pokemon => pokemon.name?.startsWith(inputSearch.toLowerCase()))
 
-   
-
-
-  
     return (
         <>
             <div className="input-container-s">

@@ -49,19 +49,18 @@ const Pokemons = () => {
     <>
       <main className="pokemons">
         <header className="hero">
-          <img className="pokedex-title" src={pokedex} alt="" />
-
           <div className="welcome-container">
+          <img className="pokedex-title" src={pokedex} alt="" />
+          <div className="hero-btns">
+          <button onClick={() => navigate("/config")} className="config"><i className='bx bxs-cog bx-spin-hover'></i></button>
+          </div>
+          </div>
+
           <h2 className="pokemons-welcome">
             <span>Bienvenido {userName}, </span> aqui podras encontrar tu
             pokemon favorito!
           </h2>
-
-          <div className="hero-btns">
-          <button onClick={() => navigate("/config")} className="config"><i className='bx bxs-cog bx-spin-hover'></i></button>
-          </div>
-          
-          </div>
+    
 
         </header>
 
