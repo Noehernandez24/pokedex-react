@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -11,11 +11,18 @@ const InputName = () => {
   const [inputValue, setInputValue] = useState("");
   const [showAdvice, setShowAdvice] = useState(false)
 
-
+  useEffect(() => {
+    const nameStorage = window.localStorage.getItem('name')
+    console.log(nameStorage)
+    if (nameStorage) {
+      dispatch(changeUserName(nameStorage))
+      navigate("/pokemons")
+    }
+  }, [])
 
   const clickButton = () => {
-
     if (inputValue !== "") {
+      window.localStorage.setItem('name', inputValue)
      dispatch(changeUserName(inputValue));
      navigate("/pokemons");
     } else{
